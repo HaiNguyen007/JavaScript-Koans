@@ -3,13 +3,13 @@ module("About Truthyness (topics/about_truthyness.js)");
 
 test("truthyness of positive numbers", function() {
     var oneIsTruthy = 1 ? true : false;
-    equal(__, oneIsTruthy, 'is one truthy?');
+    equal(true, oneIsTruthy, 'is one truthy?'); //true, 1, "1", +1, !null, !undefined, !0, !NaN,!"",!false |Not (2)
 });
 
 test("truthyness of negative numbers", function() {
     var negativeOneIsTruthy = -1 ? true : false;
-    equal(__, negativeOneIsTruthy, 'is -1 truthy?');
-});
+    equal(true, negativeOneIsTruthy, 'is -1 truthy?'); //true, 1, "1", +1, !null, !undefined, !0, !NaN,!"",!false |Not (2)
+	});
 
 test("truthyness of zero", function() {
     var zeroIsTruthy = 0 ? true : false;
