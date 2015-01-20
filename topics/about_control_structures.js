@@ -5,7 +5,7 @@ test("if", function() {
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+	equal(true, isPositive,  'what is the value of isPositive?'); //true,!!1,!"",!null,...
 });
 
 test("for", function() {
@@ -13,7 +13,7 @@ test("for", function() {
 	for (var i = 1; i <= 3; i++) {
 		counter = counter + i;
 	}
-	equal(__, counter, 'what is the value of counter?');
+	equal(16, counter, 'what is the value of counter?'); //16
 });
 
 test("for in", function() {
@@ -27,15 +27,15 @@ test("for in", function() {
 	for (var property_name in person) {
   		result = result + property_name;
 	};
-	equal(__, result, 'what is the value of result?');
+	equal("nameage", result, 'what is the value of result?'); //"nameage",'nameage'
 });
 
 test("ternary operator", function() {
-	var fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+	var fruit = true ? "apple" : "orange"; //"apple"
+	equal("apple", fruit, 'what is the value of fruit?');//"apple"
 
 	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+	equal("orange", fruit, 'now what is the value of fruit?'); //"orange"
 });
 
 test("switch", function() {
@@ -48,7 +48,7 @@ test("switch", function() {
 			result = 2;
 			break;
 	}
-	equal(__, result, 'what is the value of result?');
+	equal(2, result, 'what is the value of result?'); //2
 });
 
 test("switch default case", function() {
@@ -64,10 +64,10 @@ test("switch default case", function() {
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
+    equal("Merry", result, 'what is the value of result?'); //"Merry"
 });
 
 test("null coalescing", function() {
     var result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+    equal("a value", result, 'what is the value of result?'); //"a value"
 });

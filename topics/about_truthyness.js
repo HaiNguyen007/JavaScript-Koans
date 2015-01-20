@@ -13,10 +13,12 @@ test("truthyness of negative numbers", function() {
 
 test("truthyness of zero", function() {
     var zeroIsTruthy = 0 ? true : false;
-    equal(__, zeroIsTruthy, 'is 0 truthy?');
+    equal(false, zeroIsTruthy, 'is 0 truthy?'); //0,false,"",!!undefined,!!NaN!,!1,... 
+	//(Not: undefined, NaN, null vì equal() là strictly equal)
 });
 
 test("truthyness of null", function() {
     var nullIsTruthy = null ? true : false;
-    equal(__, nullIsTruthy, 'is null truthy?');
+    equal(false, nullIsTruthy, 'is null truthy?'); //false,0,"",!!null,!"abc",...
+	//(Not:null,undefined,)
 });
